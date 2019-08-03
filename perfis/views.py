@@ -12,3 +12,6 @@ def exibir2(request,perfil_id):
     perfil = Perfil.objects.get(id=perfil_id)
 
     return render(request, 'perfil.html', {"p" : perfil})
+
+def convidar(request, perfil_id):
+    pass

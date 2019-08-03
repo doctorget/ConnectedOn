@@ -7,10 +7,7 @@
     <title>ConnectedOn</title>
 </head>
 <body>
-    <h1>Detalhe Perfil</h1>
-    nome:{{p.nome}}, 
-    email: {{p.email}}, 
-    telefone: {{p.telefone}},
-    empresa: {{p.nome_empresa}}
+    <h1>Detalhe Perfil : {{ perfil.nome }}</h1>
+    <a href="{% url 'convidar' perfil.id %}"></a>
 </body>
 </html>

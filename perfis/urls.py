@@ -5,5 +5,6 @@ from perfis import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('perfis/', views.exibir, name='exibir'),
-    path('perfis/<perfil_id>', views.exibir2, name='exibir')
+    path('perfis/<perfil_id>', views.exibir2, name='exibir'),
+    path('perfis/<perfil_id>/convidar', views.convidar, name='convidar')
 ]
