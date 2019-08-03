@@ -7,7 +7,11 @@
     <body>
         <h1>Bem Vindo ao ConnectedOn</h1>
         <ul>
-            <li></li>
+            {% for perfil in perfis %}
+            <li>
+                <a href="/perfis/{{perfil.id}}">{{ perfil.nome }} / {{ perfil.email }}</a>
+            </li>
+            {% endfor %}
         </ul>
         
     </body>
