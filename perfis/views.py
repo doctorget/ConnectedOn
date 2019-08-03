@@ -14,4 +14,10 @@ def exibir2(request,perfil_id):
     return render(request, 'perfil.html', {"p" : perfil})
 
 def convidar(request, perfil_id):
-    pass
+    perfil_a_convidar = Perfil.objects.get(id=perfil_id)
+    perfil_logado = get_perfil_logado(request)
+    perfil_logado.convidar(perfil_a_convidar)
+    return render(request, 'index.html', {'perfis' : Perfil.objects.all()})
+
+def get_perfil_logado(request):
+    return Perfil.objects.get(id=1)
